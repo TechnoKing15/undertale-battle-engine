@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undertale Battle Engine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="battle-container">
+        <div class="health-bar-container">
+            <div class="health-bar">
+                <div class="hp-text">HP</div>
+                <div class="player-bar" id="player-bar"></div>
+            </div>
+            <div class="hp-value">20/20</div>
+        </div>
+        <div id="battle-box">
+            <div id="soul" class="soul"></div>
+            <div id="hello-world" class="hello-world">* The air crackles with <strong>E.</strong></div>
+        </div>
+        <div class="action-buttons">
+            <button id="attack-btn" class="action-button" style="background-image: url('resources/FIGHT_button.png')">FIGHT</button>
+            <button id="defend-btn" class="action-button" style="background-image: url('resources/ACT_button.png')">ACT</button>
+            <button id="item-btn" class="action-button" style="background-image: url('resources/ITEM_button.png')">ITEM</button>
+            <button id="mercy-btn" class="action-button" style="background-image: url('resources/MERCY_button.png')">MERCY</button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
