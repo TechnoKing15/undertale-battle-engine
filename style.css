@@ -164,7 +164,7 @@ body.game-over .soul {
 }
 
 .game-over-option {
-    font-family: '8BitOperator', sans-serif;
+    font-family: '8BitOperator';
     font-size: 48px;
     color: white;
     margin: 0 50px;
