@@ -1,0 +1,211 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+body.game-over .soul {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.battle-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    position: relative;
+}
+
+.health-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding-left: 50px;
+}
+
+.health-bar {
+    width: 70px;
+    height: 53px;
+    background-color: black;
+    position: relative;
+    margin: 0 15px 0 0;
+}
+
+.hp-text {
+    font-family: 'CryptOfTomorrow';
+    position: absolute;
+    left: -70px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 40px;
+}
+
+.hp-value {
+    font-family: 'TroubleBeneathTheDome';
+    color: white;
+    font-size: 59px;
+    margin-left: 15px;
+}
+
+.player-bar {
+    height: 100%;
+    background-color: rgb(254, 255, 9);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.player-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: #c00404;
+    width: var(--damaged-width, 0%);
+    transition: width 0.5s;
+}
+
+#battle-box {
+    width: 500px;
+    height: 500px;
+    background-color: #000000;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border: 13px solid white;
+}
+
+.soul {
+    width: 40px;
+    height: 40px;
+    background-image: url('https://seeklogo.com/images/U/undertale-red-soul-logo-8D3C517EF0-seeklogo.com.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    transition: none;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+}
+
+.action-button {
+    width: 290px;
+    height: 110px;
+    background-color: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0);
+    font-size: 16px;
+    margin: 0 55px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: 'PressStart2P';
+    src: url('fonts/PressStart2P-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: '8BitOperator';
+    src: url('fonts/8BitOperator.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'CryptOfTomorrow';
+    src: url('fonts/CryptOfTomorrow.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'TroubleBeneathTheDome';
+    src: url('fonts/TroubleBeneathTheDome.ttf') format('truetype');
+}
+
+.projectile {
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    background-color: white;
+}
+
+.game-over-options {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    pointer-events: auto;
+}
+
+.game-over-option {
+    font-family: '8BitOperator', sans-serif;
+    font-size: 48px;
+    color: white;
+    margin: 0 50px;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+body.game-over .game-over-options {
+    display: flex !important;
+}
+
+body.game-over .soul {
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    background-color: red !important;
+    background-image: url('https://seeklogo.com/images/U/undertale-red-soul-logo-8D3C517EF0-seeklogo.com.png') !important;
+    display: block !important;
+    border: 1px solid rgb(255, 0, 0); /* Add a border to check visibility */
+}
+
+body.game-over .game-over-options {
+    display: flex !important;
+}
+
+body.game-over .battle-container {
+    display: none;
+}
+
+.hello-world {
+    font-family: '8BitOperator', PressStart2P, sans-serif;
+    font-size: 36px;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-align: left;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
